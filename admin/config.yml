@@ -1,28 +1,30 @@
 backend:
   name: github
-  repo: YOUR-GITHUB-USERNAME/YOUR-REPOSITORY-NAME
+  repo: StarVerseMedia/StarVerseMedia.github.io
   branch: main
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
 collections:
+
   - name: "pages"
     label: "Pages"
     files:
+
       - label: "Home"
         name: "home"
         file: "index.html"
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Content", name: "body", widget: "markdown" }
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Content", name: "body", widget: "markdown"}
 
       - label: "About"
         name: "about"
         file: "about.html"
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Content", name: "body", widget: "markdown" }
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Content", name: "body", widget: "markdown"}
 
   - name: "actors"
     label: "Actors"
@@ -30,9 +32,9 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Actor Name", name: "title", widget: "string" }
-      - { label: "Photo", name: "image", widget: "image", required: false }
-      - { label: "Content", name: "body", widget: "markdown", required: false }
+      - {label: "Actor Name", name: "title", widget: "string"}
+      - {label: "Photo", name: "image", widget: "image", required: false}
+      - {label: "Content", name: "body", widget: "markdown", required: false}
 
   - name: "news"
     label: "News"
@@ -40,10 +42,10 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Image", name: "image", widget: "image", required: false }
-      - { label: "Content", name: "body", widget: "markdown" }
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Content", name: "body", widget: "markdown"}
 
   - name: "photos"
     label: "Photos"
@@ -51,9 +53,9 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Photo", name: "image", widget: "image" }
-      - { label: "Description", name: "body", widget: "markdown", required: false }
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Photo", name: "image", widget: "image"}
+      - {label: "Description", name: "body", widget: "markdown", required: false}
 
   - name: "reels"
     label: "Reels"
@@ -61,7 +63,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Reel URL", name: "url", widget: "string" }
-      - { label: "Thumbnail", name: "image", widget: "image", required: false }
-      - { label: "Description", name: "body", widget: "markdown", required: false }
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Reel URL", name: "url", widget: "string"}
+      - {label: "Thumbnail", name: "image", widget: "image", required: false}
+      - {label: "Description", name: "body", widget: "markdown", required: false}
