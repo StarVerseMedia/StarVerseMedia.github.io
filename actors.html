@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>StarVerse | Actors</title>
+  <title>Turkish Actors | StarVerse</title>
+
+  <meta name="description" content="Explore popular Turkish actors and their profiles on StarVerse. Discover biographies, careers, television series and entertainment updates.">
 
   <style>
     * {
@@ -14,26 +16,28 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
-      background: #f4f5f8;
-      color: #181818;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f6fa;
+      color: #222;
       line-height: 1.6;
     }
 
     header {
-      background: linear-gradient(135deg, #111827, #312e81);
+      background: linear-gradient(135deg, #111827, #312e81, #6d28d9);
       color: white;
-      padding: 25px 15px;
       text-align: center;
+      padding: 28px 15px;
     }
 
-    header h1 {
-      font-size: 30px;
+    .logo {
+      font-size: 31px;
+      font-weight: bold;
     }
 
-    header p {
-      color: #d9d9ff;
-      font-size: 14px;
+    .tagline {
+      color: #ddd;
+      font-size: 13px;
+      margin-top: 4px;
     }
 
     nav {
@@ -43,115 +47,142 @@
       white-space: nowrap;
     }
 
-    .nav {
+    .nav-inner {
+      max-width: 1100px;
+      margin: auto;
       display: flex;
       justify-content: center;
       gap: 25px;
-      padding: 13px;
+      padding: 13px 10px;
     }
 
     nav a {
-      text-decoration: none;
       color: #333;
+      text-decoration: none;
       font-size: 14px;
       font-weight: bold;
     }
 
     nav a:hover {
-      color: #4f46e5;
+      color: #5b21b6;
     }
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 30px 15px;
-    }
-
-    .intro {
+    .hero {
       text-align: center;
-      margin-bottom: 30px;
+      background: white;
+      padding: 40px 15px;
     }
 
-    .intro h2 {
+    .hero h1 {
       font-size: 30px;
+      color: #222;
       margin-bottom: 8px;
     }
 
-    .intro h2 span {
-      color: #4f46e5;
-    }
-
-    .intro p {
+    .hero p {
       color: #666;
       max-width: 650px;
       margin: auto;
       font-size: 14px;
     }
 
-    .actors {
+    .container {
+      max-width: 1050px;
+      margin: auto;
+      padding: 30px 15px 50px;
+    }
+
+    .category-title {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #312e81;
+      font-size: 24px;
+    }
+
+    .cards {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 20px;
     }
 
-    .actor {
+    .card {
       background: white;
-      border-radius: 15px;
-      overflow: hidden;
+      border-radius: 16px;
+      padding: 25px;
+      text-align: center;
       border: 1px solid #e5e7eb;
-      box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
     }
 
-    .photo {
-      height: 210px;
+    .avatar {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 15px;
+      border-radius: 50%;
       background: linear-gradient(135deg, #312e81, #7c3aed);
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       color: white;
-      font-size: 50px;
+      font-size: 42px;
     }
 
-    .info {
-      padding: 18px;
+    .card h2 {
+      font-size: 21px;
+      margin-bottom: 5px;
     }
 
-    .country {
-      color: #4f46e5;
+    .card .role {
+      color: #5b21b6;
       font-size: 12px;
       font-weight: bold;
-      text-transform: uppercase;
+      margin-bottom: 10px;
     }
 
-    .info h3 {
-      margin: 6px 0;
-      font-size: 20px;
-    }
-
-    .info p {
+    .card p {
       color: #666;
       font-size: 13px;
+      margin-bottom: 18px;
     }
 
     .button {
       display: inline-block;
-      margin-top: 12px;
-      background: #4f46e5;
+      background: #5b21b6;
       color: white;
       text-decoration: none;
-      padding: 8px 14px;
-      border-radius: 20px;
-      font-size: 12px;
+      padding: 10px 20px;
+      border-radius: 22px;
+      font-size: 13px;
       font-weight: bold;
+    }
+
+    .button:hover {
+      background: #43208a;
+    }
+
+    .section {
+      margin-top: 35px;
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .section h2 {
+      color: #312e81;
+      margin-bottom: 10px;
+    }
+
+    .section p {
+      color: #666;
+      font-size: 14px;
     }
 
     footer {
       background: #111827;
       color: #aaa;
       text-align: center;
-      padding: 25px 15px;
-      margin-top: 30px;
-      font-size: 13px;
+      padding: 28px 15px;
     }
 
     footer strong {
@@ -159,17 +190,22 @@
       font-size: 18px;
     }
 
-    @media (max-width: 750px) {
-      .nav {
+    footer p {
+      font-size: 12px;
+      margin-top: 5px;
+    }
+
+    @media (max-width: 650px) {
+      .nav-inner {
         justify-content: flex-start;
       }
 
-      .actors {
+      .cards {
         grid-template-columns: 1fr;
       }
 
-      .intro h2 {
-        font-size: 25px;
+      .hero h1 {
+        font-size: 26px;
       }
     }
   </style>
@@ -177,99 +213,145 @@
 
 <body>
 
-  <header>
-    <h1>⭐ StarVerse</h1>
-    <p>Your World of Stars & Celebrities</p>
-  </header>
+<header>
+  <div class="logo">⭐ StarVerse</div>
+  <div class="tagline">Your World of Stars & Celebrities</div>
+</header>
 
-  <nav>
-    <div class="nav">
-      <a href="index.html">Home</a>
-      <a href="actors.html">Actors</a>
-      <a href="#">News</a>
-      <a href="#">Reels</a>
-      <a href="#">Photos</a>
-      <a href="#">About</a>
-    </div>
-  </nav>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html">Home</a>
+    <a href="actors.html">Actors</a>
+    <a href="#">News</a>
+    <a href="#">Reels</a>
+    <a href="#">Photos</a>
+    <a href="#">About</a>
+  </div>
+</nav>
 
-  <main class="container">
+<section class="hero">
+  <h1>Turkish Actors</h1>
+  <p>
+    Explore popular Turkish actors, their careers, television
+    series, films and entertainment updates.
+  </p>
+</section>
 
-    <section class="intro">
-      <h2>Popular <span>Actors</span></h2>
+<main class="container">
+
+  <h2 class="category-title">Popular Turkish Stars</h2>
+
+  <div class="cards">
+
+    <!-- Burak Özçivit -->
+    <div class="card">
+      <div class="avatar">⭐</div>
+
+      <h2>Burak Özçivit</h2>
+
+      <div class="role">
+        Actor & Former Model
+      </div>
 
       <p>
-        Explore actors and celebrities from Turkey and around the world.
-        Discover their careers, projects and latest entertainment updates.
+        Explore the profile, career and entertainment updates
+        of Turkish star Burak Özçivit.
       </p>
-    </section>
 
-    <section class="actors">
-
-      <article class="actor">
-        <div class="photo">🎬</div>
-
-        <div class="info">
-          <div class="country">Turkey</div>
-
-          <h3>Turkish Actors</h3>
-
-          <p>
-            Explore popular Turkish actors, television stars and their
-            latest entertainment projects.
-          </p>
-
-          <a class="button" href="#">View Profile</a>
-        </div>
-      </article>
+      <a class="button" href="burak-ozcivit.html">
+        View Profile
+      </a>
+    </div>
 
 
-      <article class="actor">
-        <div class="photo">⭐</div>
+    <!-- Kıvanç Tatlıtuğ -->
+    <div class="card">
+      <div class="avatar">⭐</div>
 
-        <div class="info">
-          <div class="country">International</div>
+      <h2>Kıvanç Tatlıtuğ</h2>
 
-          <h3>International Stars</h3>
+      <div class="role">
+        Actor & Former Model
+      </div>
 
-          <p>
-            Discover famous actors and celebrities from different parts
-            of the world.
-          </p>
+      <p>
+        Discover the career and television work of Turkish actor
+        Kıvanç Tatlıtuğ.
+      </p>
 
-          <a class="button" href="#">View Profile</a>
-        </div>
-      </article>
+      <a class="button" href="kivanc-tatlitug.html">
+        View Profile
+      </a>
+    </div>
 
 
-      <article class="actor">
-        <div class="photo">🌟</div>
+    <!-- Engin Akyürek -->
+    <div class="card">
+      <div class="avatar">⭐</div>
 
-        <div class="info">
-          <div class="country">Entertainment</div>
+      <h2>Engin Akyürek</h2>
 
-          <h3>Featured Stars</h3>
+      <div class="role">
+        Actor, Writer & Screenwriter
+      </div>
 
-          <p>
-            Find featured celebrities, their latest work and interesting
-            entertainment stories.
-          </p>
+      <p>
+        Learn about the career, popular works and entertainment
+        updates of Engin Akyürek.
+      </p>
 
-          <a class="button" href="#">View Profile</a>
-        </div>
-      </article>
+      <a class="button" href="engin-akyurek.html">
+        View Profile
+      </a>
+    </div>
 
-    </section>
 
-  </main>
+    <!-- Çağatay Ulusoy -->
+    <div class="card">
+      <div class="avatar">⭐</div>
 
-  <footer>
-    <strong>⭐ StarVerse</strong>
+      <h2>Çağatay Ulusoy</h2>
 
-    <p>Your World of Stars & Celebrities</p>
+      <div class="role">
+        Actor & Model
+      </div>
 
-    <p>© 2026 StarVerse. All Rights Reserved.</p>
-  </footer>
+      <p>
+        Explore the career, popular works and latest entertainment
+        information about Çağatay Ulusoy.
+      </p>
+
+      <a class="button" href="cagatay-ulusoy.html">
+        View Profile
+      </a>
+    </div>
+
+  </div>
+
+
+  <section class="section">
+
+    <h2>More Turkish Stars Coming Soon</h2>
+
+    <p>
+      StarVerse will continue adding more Turkish actors,
+      actresses, celebrities, biographies, news, photos and
+      entertainment stories.
+    </p>
+
+  </section>
+
+</main>
+
+<footer>
+
+  <strong>⭐ StarVerse</strong>
+
+  <p>Your World of Stars & Celebrities</p>
+
+  <p>© 2026 StarVerse. All Rights Reserved.</p>
+
+</footer>
 
 </body>
 </html>
